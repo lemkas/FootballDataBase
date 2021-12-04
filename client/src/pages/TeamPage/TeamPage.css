@@ -1,0 +1,108 @@
+.fl {
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px dotted lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-logo {
+    width: 300px;
+}
+
+.player-card {
+    height: 100px;
+    display: flex;
+    border: 1px dotted lightgray;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 5px;
+    flex-grow: 2;
+
+    
+
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left p {
+    margin-left: 10px;
+}
+
+.player-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.player-info {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.coach-card {
+    height: 100px;
+    display: flex;
+    border: 1px dotted lightgray;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: lightblue;
+    flex-grow: 2;
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.coaches {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.delete {
+    margin-left: 5px;
+    cursor: pointer;
+    color: rgb(206, 70, 70)
+}
+
+
+
+  
