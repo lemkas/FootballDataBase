@@ -32,7 +32,7 @@ router.post('/players/create', async (req, res) => {
             .input('Photo_url', sql.Text, Photo_url)
             .query('INSERT INTO PLAYER (FirstName, LastName, MiddleName, ID_role, ID_team, Number, Weight, Height, Photo_url) VALUES (@FirstName, @LastName, @MiddleName, @ID_role, @ID_team, @Number, @Weight, @Height, @Photo_url)')
         
-        res.status(200)
+        res.status(200).json('Вы создали нового игрока')
     } catch (error) {
         res.json(error)
     }

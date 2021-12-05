@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { Component } from 'react'
 import '../App.css'
 import Button from '../Components/UI/Button'
+import Message from '../Components/UI/Message'
 
 export class CreatePlayer extends Component {
     constructor (props) {
@@ -16,7 +17,8 @@ export class CreatePlayer extends Component {
             height: '',
             weight: '',
             number: '',
-            photoUrl: ''
+            photoUrl: '',
+            message: ''
         }
     }
 
@@ -53,13 +55,16 @@ export class CreatePlayer extends Component {
             Number: this.state.number,
             Photo_url: this.state.photoUrl
         }
-        await axios.post('http://localhost:5000/players/create', {
+        const res = await axios.post('http://localhost:5000/players/create', {
             data
         })
         
-        setTimeout(() => {
-            this.props.history.push('/teams/' + this.state.ID_team)
-        }, 1000)
+        this.setState({
+            message: res.data
+        })
+        
+        this.props.history.push('/teams/' + this.state.ID_team)
+        
         
     }
 
@@ -155,6 +160,12 @@ export class CreatePlayer extends Component {
                         required
 
                     />
+                    {
+                        this.state.message 
+                            ? <Message text={this.state.message} /> 
+                            : null
+                    }
+
                     <Button type="submit" text="Create new player" />
                 </form>
                 

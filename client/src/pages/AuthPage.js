@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './AuthPage.css'
 import Button from '../Components/UI/Button'
 import axios from 'axios'
-import Error from '../Components/UI/Error'
+import Message from '../Components/UI/Message'
 
 export class AuthPage extends Component {
     state = {
@@ -80,10 +80,10 @@ export class AuthPage extends Component {
                         required 
                     />
                     {
-                        this.state.error ? (<Error error={this.state.error} /> ) : null 
+                        this.state.error ? (<Message text={this.state.error} name="error"/> ) : null 
                     }
                     {
-                        localStorage.hasOwnProperty('token') ? (<Error error='SUCCESS' /> ) : null
+                        localStorage.hasOwnProperty('token') ? (<Message text="success" name='success' /> ) : null
                     }
                     
                     <Button type="submit" text="SIGN IN"/>

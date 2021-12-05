@@ -28,6 +28,8 @@ export class CreateCity extends Component {
             errors: false 
         })
 
+        this.props.history.push('/teams/' + this.state.ID_team)
+
         
     }
 

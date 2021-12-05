@@ -29,6 +29,8 @@ export class CreateStadium extends Component {
             address: ''
         })
 
+        this.props.history.push('/');
+
         
     }
 

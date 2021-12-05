@@ -52,6 +52,8 @@ export class CreateTeam extends Component {
             data
         })
 
+        this.props.history.push('/')
+
         
     }
     

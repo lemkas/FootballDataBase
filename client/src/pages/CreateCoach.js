@@ -54,7 +54,7 @@ export class CreateCoach extends Component {
             data
         })
 
-        console.log(res)
+        this.props.history.push('/teams/' + this.state.ID_team)
 
         
     }
